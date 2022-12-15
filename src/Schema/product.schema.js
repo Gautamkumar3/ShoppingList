@@ -8,9 +8,7 @@ let ProductSchema = mongoose.Schema(
     date: {
       type: String,
       required: true,
-      default: new Date(Date.now()).toLocaleTimeString("en-GB", {
-        hour12: false,
-      }),
+      default: new Date(Date.now()).toLocaleTimeString("en-GB"),
     },
     description: { type: String, required: true },
   },
