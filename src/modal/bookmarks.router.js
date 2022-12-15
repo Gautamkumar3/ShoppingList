@@ -22,14 +22,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.delete("/:id", async (req, res) => {
-  const id = req.params.id;
-  try {
-    let deletedData = await BookMarks.findByIdAndDelete(id);
-    return res.status(200).send(deletedData);
-  } catch (e) {
-    res.status(401).send(e.message);
-  }
-});
+
 
 module.exports = app;
